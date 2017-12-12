@@ -67,7 +67,16 @@ public class MainActivity extends AppCompatActivity {
                     String phonenum = data.getStringExtra("INFO_PHONENUM");
                     Toast.makeText(this, "Name : " +name, Toast.LENGTH_LONG).show();
                     Toast.makeText(this, "Phone Number : " +phonenum, Toast.LENGTH_LONG).show();
+                    getSharedPreferences("info", MODE_PRIVATE)
+                            .edit()
+                            .putString("NAME",name)
+                            .apply();
+                    getSharedPreferences("info", MODE_PRIVATE)
+                            .edit()
+                            .putString("PHONENUM",phonenum)
+                            .apply();
                 }
+
                 break;
         }
 
