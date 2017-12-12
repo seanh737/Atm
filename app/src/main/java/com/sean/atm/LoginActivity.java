@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         String passwd = edpasswd.getText().toString();
         if(userid.equals("jack") && passwd.equals("12345")){
             Toast.makeText(this , "登入成功" , Toast.LENGTH_LONG).show();
+            getIntent().putExtra("LOGIN_USERID", userid);
+            getIntent().putExtra("LOGIN_PASSWD", passwd);
+            setResult(RESULT_OK, getIntent());
             finish();
-        }else{
+        }else{      //登入失敗
             new AlertDialog.Builder(this)
                     .setTitle("錯誤")
                     .setMessage("登入失敗")
