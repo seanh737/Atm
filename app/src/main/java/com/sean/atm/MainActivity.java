@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public  static final int FUNC_LOGIN = 6 ;
+    public  static final /*不再改變*/ int FUNC_LOGIN = 6 ;
     public  static final int REQUEST_LOGIN = 1 ;
     public  static final int REQUEST_USERINFO = 2 ;
     boolean logon = false;
