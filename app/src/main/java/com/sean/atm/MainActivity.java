@@ -70,9 +70,6 @@ public class MainActivity extends AppCompatActivity {
                     getSharedPreferences("info", MODE_PRIVATE)
                             .edit()
                             .putString("NAME",name)
-                            .apply();
-                    getSharedPreferences("info", MODE_PRIVATE)
-                            .edit()
                             .putString("PHONENUM",phonenum)
                             .apply();
                 }
