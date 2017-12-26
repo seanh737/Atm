@@ -43,7 +43,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
     }
     public void address(View view){
-        startActivity(new Intent(this, AddrActivity.class));
+        startActivity(new Intent(this, CityActivity.class));
     }
     public void ok(View view){
         Log.d(TAG, "ok" +age.getSelectedItem().toString());

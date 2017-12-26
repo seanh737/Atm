@@ -9,4 +9,9 @@
         <item>19</item>
         <item>20</item>
     </string-array>
+    <string name="area">
+        <item>中正區</item>
+        <item>暖暖區</item>
+        <item>八堵區</item>
+    </string>
 </resources>
