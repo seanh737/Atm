@@ -1,5 +1,6 @@
 package com.sean.atm;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +41,9 @@ public class UserInfoActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.aaa, android.R.layout.simple_list_item_1);  //利用values>>strings.xml  來儲存資料
         age.setAdapter(adapter);
 
+    }
+    public void address(View view){
+        startActivity(new Intent(this, AddrActivity.class));
     }
     public void ok(View view){
         Log.d(TAG, "ok" +age.getSelectedItem().toString());

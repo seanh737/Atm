@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        startActivity(new Intent(this, Ch8Activity.class));
-        if(!logon){
+            if(!logon){
             Intent intent = new Intent(this, LoginActivity.class);
 //            startActivity(intent);
             startActivityForResult(intent , REQUEST_LOGIN);
