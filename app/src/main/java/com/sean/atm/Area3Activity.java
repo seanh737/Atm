@@ -7,20 +7,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.List;
-
-public class AreaActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-
+public class Area3Activity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private String[] areas;
     private ListView list_area;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_area);
-        list_area = (ListView) findViewById(R.id.area_K);
-        areas = new String[]{"中正區", "暖暖區", "八堵區"};
+        setContentView(R.layout.activity_area3);
+        list_area = (ListView) findViewById(R.id.area_T);
+        areas = new String[]{"信義區","大安區","士林區"};
         ArrayAdapter adapter = new ArrayAdapter(this , android.R.layout.simple_list_item_1, areas);
         list_area.setAdapter(adapter);
         list_area.setOnItemClickListener(this);
@@ -28,8 +23,8 @@ public class AreaActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-    getIntent().putExtra("AREA_K",areas[position]);
-    setResult(RESULT_OK,getIntent());
-    finish();
+        getIntent().putExtra("AREA_T",areas[position]);
+        setResult(RESULT_OK,getIntent());
+        finish();
     }
 }
