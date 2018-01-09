@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         String userid = edUserid.getText().toString();
         String passwd = edpasswd.getText().toString();
-        if(userid.equals("jack") && passwd.equals("12345")){  //登入成功
+        if(userid.equals("jack") && passwd.equals("12345")){  //登入成功                                 01/09 可以利用Ch13 連網帳號作練習
             Toast.makeText(this , "登入成功" , Toast.LENGTH_LONG).show();
             getIntent().putExtra("LOGIN_USERID", userid);
             getIntent().putExtra("LOGIN_PASSWD", passwd);
